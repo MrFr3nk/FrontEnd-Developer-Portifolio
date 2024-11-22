@@ -1,10 +1,190 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Developer Portfolio</title>
-    <link rel="stylesheet" href="FrontEnd-Developer-Portifolio/style.css">
+    <style>
+        /* Global Styles */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+
+        header {
+            background-color: #2196F3;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Hero Styles */
+
+        .hero {
+            background-image: linear-gradient(to bottom, #2196F3, #4CAF50);
+            background-size: 100% 300px;
+            background-position: 0% 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            animation: fadeIn 2s;
+        }
+
+        .hero-content {
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Projects Styles */
+
+        .projects {
+            padding: 20px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+
+        .project {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s;
+        }
+
+        .project img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .project h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* About Styles */
+
+        .about {
+            padding: 20px;
+        }
+
+        .about h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .about p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Contact Styles */
+
+        .contact {
+            padding: 20px;
+        }
+
+        .contact h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .contact p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .contact button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Animations */
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -16,59 +196,128 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+  
+</nav
+</header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to my portfolio!</h1>
-            <p>I'm a passionate developer with a love for creating innovative solutions.</p>
-            <button>Explore My Work</button>
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Welcome to my portfolio!</h1>
+        <p>I'm a passionate developer with a love for creating innovative solutions.</p>
+        <button>Explore My Work</button>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+        <!-- Project 1 -->
+        <div class="project">
+            <img src="project1.jpg" alt="Project 1">
+            <h3>Project 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <!-- Project 1 -->
-            <div class="project">
-                <img src="project1.jpg" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project">
-                <img src="project2.jpg" alt="Project 2">
-                <h3>Project 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project">
-                <img src="project3.jpg" alt="Project 3">
-                <h3>Project 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
+        <!-- Project 2 -->
+        <div class="project">
+            <img src="project2.jpg" alt="Project 2">
+            <h3>Project 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-    </section>
+        <!-- Project 3 -->
+        <div class="project">
+            <img src="project3.jpg" alt="Project 3">
+            <h3>Project 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-        <button>Contact Me</button>
-    </section>
+<!-- About Section -->
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+</section>
 
-    <script src="script.js"></script>
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+    <button>Contact Me</button>
+</section>
+
+<script>
+    // Add event listener to hero button
+    document.querySelector('.hero button').addEventListener('click', () => {
+        // Scroll to projects section
+        document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Add event listener to project cards
+    document.querySelectorAll('.project').forEach((project) => {
+        project.addEventListener('mouseover', () => {
+            // Add hover effect
+            project.style.transform = 'scale(1.1)';
+            project.style.boxShadow = '0 0 20px rgba(0, 0, 0, 0.5)';
+        });
+
+        project.addEventListener('mouseout', () => {
+            // Remove hover effect
+            project.style.transform = 'scale(1)';
+            project.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
+        });
+    });
+
+    // Add event listener to contact button
+    document.querySelector('.contact button').addEventListener('click', () => {
+        // Open contact form
+        document.querySelector('.contact-form').style.display = 'block';
+    });
+
+    // Add event listener to contact form close button
+    document.querySelector('.contact-form-close').addEventListener('click', () => {
+        // Close contact form
+        document.querySelector('.contact-form').style.display = 'none';
+    });
+
+    // Add event listener to contact form submit button
+    document.querySelector('.contact-form-submit').addEventListener('click', (e) => {
+        // Prevent default form submission
+        e.preventDefault();
+
+        // Get form data
+        const name = document.querySelector('.contact-form-name').value;
+        const email = document.querySelector('.contact-form-email').value;
+        const message = document.querySelector('.contact-form-message').value;
+
+        // Send form data to server (replace with your own server-side code)
+        fetch('/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, message }),
+        })
+        .then((response) => response.json())
+        .then((data) => console.log(data))
+        .catch((error) => console.error(error));
+    });
+
+    // Add event listener to window scroll
+    window.addEventListener('scroll', () => {
+        // Get current scroll position
+        const scrollPosition = window.scrollY;
+
+        // Add class to header if scrolled past hero section
+        if (scrollPosition > document.querySelector('.hero').offsetHeight) {
+            document.querySelector('header').classList.add('scrolled');
+        } else {
+            document.querySelector('header').classList.remove('scrolled');
+        }
+    });
+</script>
+
 </body>
 </html>
-
+     
